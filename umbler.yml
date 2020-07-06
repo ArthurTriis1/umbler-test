@@ -1,0 +1,22 @@
+name: Strapi
+author: Umbler
+logo_url: https://design.umbler.com/assets/svg/sprite-logos.svg#strapi
+version: 3.0.0
+description: "Strapi and its set of plugins will save you weeks of development time, whether you're managing content for a website or developing a mobile application."
+short_description: "The open source Headless CMS Front-End Developers love."
+stack: node
+pack: "**/*.*"
+dest: /
+
+env:
+  NODE_ENV: "production"
+
+build_pipeline:
+  - npm install
+
+requires:
+  web: 
+    quantity: 1
+    size: 1
+  database:
+    - type: mongodb
